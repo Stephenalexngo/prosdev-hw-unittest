@@ -29,5 +29,5 @@ D | Did not Meet Expectation | 74.99 and below
 3. After running all the tests and everything passed, take a screenshot of the results and add it as a section in the README.
 
 ## Results
-![�result�](https://github.com/Stephenalexngo/prosdev-hw-unittest/blob/master/results.png?raw=true)
+![“result”](https://github.com/Stephenalexngo/prosdev-hw-unittest/blob/master/results.png?raw=true)
 

@@ -1,46 +1,85 @@
 const { gradeClassifier } = require('./index');
 
 describe('Grade Classifier Group', () => {
-    it('Should Show Oustanding Grade', () => {
-        var grade = 96;
+    it('When Grade is 95 Then It Should Show "Oustanding"', () => {
+        var grade = 95;
         var expectedString = "O - Oustanding";
 
-        expect(gradeClassifier(grade)).toBe(expectedString)
+        var result = gradeClassifier(grade)
+
+        expect(result).toBe(expectedString)
     });
 
-    it('Should Show Very Good Grade', () => {
-        var grade = 92;
+    it('When Grade is 90 Then It Should Show "Very Good"', () => {
+        var grade = 90;
         var expectedString = "V - Very Good";
 
-        expect(gradeClassifier(grade)).toBe(expectedString)
+        var result = gradeClassifier(grade)
+
+        expect(result).toBe(expectedString)
     });
 
-    it('Should Show Good Grade', () => {
-        var grade = 87;
+    it('When Grade is 85 Then It Should Show "Good"', () => {
+        var grade = 85;
         var expectedString = "G - Good";
 
-        expect(gradeClassifier(grade)).toBe(expectedString)
+        var result = gradeClassifier(grade)
+
+        expect(result).toBe(expectedString)
     });
 
-    it('Should Show Satisfactory Grade', () => {
-        var grade = 84;
+    it('When Grade is 80 Then It Should Show "Satisfactory"', () => {
+        var grade = 80;
         var expectedString = "S - Satisfactory";
 
-        expect(gradeClassifier(grade)).toBe(expectedString)
+        var result = gradeClassifier(grade)
+
+        expect(result).toBe(expectedString)
     });
 
-    it('Should Show Needs Improvement Grade', () => {
-        var grade = 77;
+    it('When Grade is 75 Then It Should Show "Needs Improvement"', () => {
+        var grade = 75;
         var expectedString = "N - Needs Improvement";
 
-        expect(gradeClassifier(grade)).toBe(expectedString)
+        var result = gradeClassifier(grade)
+
+        expect(result).toBe(expectedString)
     });
 
-    it('Should Show Did not Meet Expectation Grade', () => {
-        var grade = 55;
+    it('When Grade is 74 Then It Should Show "Did not Meet Expectation"', () => {
+        var grade = 74;
         var expectedString = "D - Did not Meet Expectation";
 
-        expect(gradeClassifier(grade)).toBe(expectedString)
+        var result = gradeClassifier(grade)
+
+        expect(result).toBe(expectedString)
+    });
+
+    it('When Grade is Negative Then It Should Show "Invalid Grade"', () => {
+        var grade = 101;
+        var expectedString = "Invalid Grade";
+
+        var result = gradeClassifier(grade)
+
+        expect(result).toBe(expectedString)
+    });
+
+    it('When Grade is Above 100 Then It Should Show "Invalid Grade"', () => {
+        var grade = 101;
+        var expectedString = "Invalid Grade";
+
+        var result = gradeClassifier(grade)
+
+        expect(result).toBe(expectedString)
+    });
+
+    it('When Grade is Non-Numeric Then It Should Show "Invalid Grade"', () => {
+        var grade = "AI!@&^#* @$kdas";
+        var expectedString = "Invalid Grade";
+
+        var result = gradeClassifier(grade)
+
+        expect(result).toBe(expectedString)
     });
 });
 

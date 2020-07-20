@@ -10,8 +10,10 @@ const functions = {
             return "S - Satisfactory";
         else if (grade < 80 && grade >= 75)
             return "N - Needs Improvement";
-        else
+        else if (grade < 75 && grade >= 0)
             return "D - Did not Meet Expectation";
+        else
+            return "Invalid Grade";
     }
 }
 

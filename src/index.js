@@ -1,7 +1,7 @@
 const functions = {
     gradeClassifier: (grade) => {
         if (grade <= 100 && grade >= 95)
-            return "O - Oustanding";
+            return "O - Outstanding";
         else if (grade < 95 && grade >= 90)
             return "V - Very Good";
         else if (grade < 90 && grade >= 85)

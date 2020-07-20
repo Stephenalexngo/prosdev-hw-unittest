@@ -1,9 +1,9 @@
 const { gradeClassifier } = require('./index');
 
 describe('Grade Classifier Group', () => {
-    it('When Grade is between or equal to 100 and 95 Then It Should Show "Oustanding"', () => {
+    it('When Grade is between or equal to 100 and 95 Then It Should Show "Outstanding"', () => {
         var grade = 95;
-        var expectedString = "O - Oustanding";
+        var expectedString = "O - Outstanding";
 
         var result = gradeClassifier(grade)
 
